@@ -165,7 +165,6 @@ nav {
     padding-left: 30px; /* Menambahkan ruang untuk tanda centang */
 }
 
-/* Tambahkan tanda centang menggunakan pseudo-elemen ::before */
 .benefits li::before {
     content: "";
     background-image: url("img/Group 53.svg"); 
@@ -175,4 +174,60 @@ nav {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+/* Style the Why Us section */
+.why-us-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #f7f7f7; */
+}
+
+.why-us-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.why-us-section p {
+    font-size: 16px;
+}
+
+/* Style the cards container */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Membungkus card ke baris baru jika tidak cukup lebar */
+}
+
+/* Style the cards */
+.card {
+    width: calc(25% - 20px); /* Menentukan lebar card dengan jarak antar card 20px */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.card p {
+    font-size: 16px;
+}
+
+/* Style the card icons */
+.card-icon {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.card-icon img {
+    width: 40px;
+    height: 40px;
 }

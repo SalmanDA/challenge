@@ -25,6 +25,10 @@ nav {
     font-weight: bold;
 }
 
+.menu-toggle {
+    display: none; /* Sembunyikan hamburger button pada tampilan desktop */
+}
+
 .menu {
     list-style: none;
     display: flex;
@@ -411,7 +415,7 @@ footer {
 
 .footer-right {
     flex: 1;
-    text-align: right;
+    text-align: left;
     padding: 0 20px;
 }
 
@@ -430,6 +434,47 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .menu {
+        display: none; /* Sembunyikan daftar menu pada tampilan mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Sesuaikan dengan tinggi navigasi Anda */
+        left: 0;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active {
+        display: flex; /* Tampilkan daftar menu saat tombol hamburger ditekan */
+    }
+
+    .menu-toggle {
+        display: block; /* Tampilkan hamburger button pada tampilan mobile */
+        cursor: pointer;
+    }
+
+    /* Animasi hamburger button */
+    .bar {
+        background-color: #000;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
     .home {
         flex-direction: column;
     }
@@ -449,4 +494,23 @@ footer {
     .card {
         width: 100%;
     }
+
+    .testimonial-container {
+        flex-direction: column;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+
+    .footer-section{
+        margin-bottom: 10px;
+    }
+
+    .footer-right {
+        flex: 1;
+        text-align: left;
+        margin: 20px 0;
+    }
+
 }

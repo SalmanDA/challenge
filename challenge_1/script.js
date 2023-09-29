@@ -1,7 +1,14 @@
 const testimonialCards = document.querySelectorAll('.testimonial-card');
 const prevButton = document.querySelector('.prev-btn');
 const nextButton = document.querySelector('.next-btn');
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
 let currentIndex = 0;
+
+menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
 
 function showCard(index) {
     testimonialCards.forEach((card, i) => {
